@@ -10,5 +10,8 @@ examples:
 	@node examples/run.js examples/hash.yml
 	@node examples/run.js examples/config.yml
 	@node examples/run.js examples/dates.yml
-	
+
+browser:
+	uglifyjs --compress --wrap=yaml lib/yaml.js > yaml.min.js
+
 .PHONY: test examples
